@@ -17,26 +17,42 @@ public class CalculatorTest {
     private final Calculator calculator = new Calculator();
 
     @Test
-    public void add() {
+    public void addShouldReturnSameAsResult() {
         assertThat(calculator.add(NUMBER_1, NUMBER_2), is(RESULT));
+    }
+
+    @Test
+    public void addShouldReturnDifferentAsResult() {
         assertThat(calculator.add(NUMBER_1, NUMBER_3), not(RESULT));
     }
 
     @Test
-    public void subtract() {
+    public void subtractShouldReturnSameAsResult() {
         assertThat(calculator.subtract(NUMBER_1, NUMBER_2), is(RESULT));
+    }
+
+    @Test
+    public void subtractShouldReturnDifferentAsResult() {
         assertThat(calculator.subtract(NUMBER_1, NUMBER_3), not(RESULT));
     }
 
     @Test
-    public void multiply() {
+    public void multiplyShouldReturnSameAsResult() {
         assertThat(calculator.multiply(NUMBER_1, NUMBER_2), is(RESULT));
+    }
+
+    @Test
+    public void multiplyShouldReturnDifferentAsResult() {
         assertThat(calculator.multiply(NUMBER_3, NUMBER_3), not(RESULT));
     }
 
     @Test
-    public void divide() {
+    public void divideShouldReturnSameAsResult() {
         assertThat(calculator.divide(NUMBER_1, NUMBER_3), is(RESULT));
+    }
+
+    @Test
+    public void divideShouldReturnDifferentAsResult() {
         assertThat(calculator.divide(NUMBER_3, NUMBER_3), not(RESULT));
     }
 }
